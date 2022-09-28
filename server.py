@@ -1,7 +1,7 @@
 import socket 
 
 IP="0.0.0.0"
-PORT=53
+#PORT=0 port not specified for security reason
 ADDR=(IP,PORT)
 FORMAT="utf-8"
 SIZE=1024
