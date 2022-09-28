@@ -8,5 +8,5 @@ SIZE=1024
 
 def main():
     client=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    client.bind(ADDR)
-    
+    client.connect(ADDR)
+        
