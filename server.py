@@ -61,7 +61,7 @@ def main():
                 s_t_c=str(sent_to_count)
                 send_count=str(count_words(s_t_c))
 
-                message_counter="Your sentence is composed by : " +send_count
+                message_counter="Your sentence is composed by : " +send_count + " words"
 
                 conn.send(message_counter.encode(FORMAT))
                 
