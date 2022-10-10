@@ -42,10 +42,18 @@ def main():
             
             conn.send(msg_f_send.encode(FORMAT))
 
+            if condt=="help":
 
+                message_to_help=" -> I will illustrate what I can do for you: "
+
+                conn.send(message_to_help.encode(FORMAT))
+
+
+            
+            
             if condt=="count":
 
-                message_count="Well, tell me your sentence, I will provide you the number of words..."
+                message_count=" -> Well, tell me your sentence, I will provide you the number of words..."
 
                 conn.send(message_count.encode(FORMAT))
 
@@ -53,11 +61,16 @@ def main():
                 s_t_c=str(sent_to_count)
                 send_count=str(count_words(s_t_c))
 
-                conn.send(send_count.encode(FORMAT))
+                message_counter="Your sentence is composed by : " +send_count
+
+                conn.send(message_counter.encode(FORMAT))
                 
                 
                 
                 print(send_count)
+
+            
+            
 
 
 
@@ -66,7 +79,7 @@ def main():
 
 def count_words(sentence):
 
-    number_words=len(re.findall(r'\w',sentence))
+    number_words=len(re.findall(r'\w+',sentence))
 
     print(number_words)
     return number_words
