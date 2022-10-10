@@ -44,9 +44,11 @@ def main():
 
             if condt=="help":
 
-                message_to_help=" -> I will illustrate what I can do for you: "
+                message_to_help=" -> I will illustrate what I can do for you: \n 1. with 'count' I can count the number of words in your sentence"
+
 
                 conn.send(message_to_help.encode(FORMAT))
+                
 
 
             
